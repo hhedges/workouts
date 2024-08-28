@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - path: .env
+    container_name: workouts-backend_c
+    ports:
+      - ${PORT_BACKEND}:${PORT_BACKEND}
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - path: .env
+    container_name: workouts-frontend_c
+    ports:
+      - ${PORT_FRONTEND}:${PORT_FRONTEND}
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
