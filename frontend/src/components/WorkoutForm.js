@@ -13,6 +13,16 @@ const WorkoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    // validate form filled out by user
+    if (!title || !load || !reps) {
+      setError('Please fill in all the fields correctly.')
+      return
+    }
+    if (isNaN(parseInt(load)) || isNaN(parseInt(reps))) {
+      setError('Please fill in all the fields correctly.')
+      return
+    }
+
     const workout = {title, load, reps}
     
     const response = await fetch(`${process.env.REACT_APP_SERVER_BACKEND}:${process.env.REACT_APP_PORT_BACKEND}/api/workouts`, {
