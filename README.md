@@ -1,9 +1,6 @@
 ### WORKOUT MANAGER
 Workout Manager application tutorial created with Mongo, Express, Node, and React
 
-### POST CLONE INSTRUCTIONS - ROOT
-1. rename '.env.example' to '.env' and fill out required values
-
 ### POST CLONE INSTRUCTIONS - BACKEND
 1. cd to 'backend'
 2. rename '.env.example' to '.env' and fill out required values
@@ -18,7 +15,8 @@ Workout Manager application tutorial created with Mongo, Express, Node, and Reac
 
 ### POST CLONE INSTRUCTIONS - DOCKER
 1. cd to root
-2. open a terminal and type 'docker-compose up -d'
+2. edit backend and frontend ports in 'docker.compose.yaml'
+3. open a terminal and type 'docker-compose up -d'
 
 ### TUTORIAL FROM NETNINJA.DEV
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE

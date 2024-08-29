@@ -7,7 +7,7 @@ services:
       - path: .env
     container_name: workouts-backend_c
     ports:
-      - ${PORT_BACKEND}:${PORT_BACKEND}
+      - '4001:4001'
   frontend:
     build:
       context: ./frontend
@@ -16,7 +16,7 @@ services:
       - path: .env
     container_name: workouts-frontend_c
     ports:
-      - ${PORT_FRONTEND}:${PORT_FRONTEND}
+      - '3001:3001'
     stdin_open: true
     tty: true
     depends_on:
